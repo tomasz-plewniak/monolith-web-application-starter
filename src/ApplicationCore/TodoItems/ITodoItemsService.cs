@@ -2,13 +2,13 @@
 
 public interface ITodoItemsService
 {
-    Task<List<TodoItemEntity>> GetAllAsync(CancellationToken cancellationToken = default);
+    Task<List<TodoItemDto>> GetAllAsync(CancellationToken cancellationToken = default);
     
-    Task<TodoItemEntity> GetByIdAsync(int id, CancellationToken cancellationToken = default);
+    Task<TodoItemDto> GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
-    Task<TodoItemEntity> Create(TodoItemEntity todoItem);
+    Task<TodoItemDto> Create(TodoItemDto todoItem);
 
-    Task<TodoItemEntity> Update(int id, TodoItemEntity todoItemEntity);
+    Task<TodoItemDto> Update(int id, TodoItemDto todoItemEntity);
 
     Task<bool> DeleteById(int id);
 }
