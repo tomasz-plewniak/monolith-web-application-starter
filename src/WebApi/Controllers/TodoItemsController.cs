@@ -15,7 +15,7 @@ public class TodoItemsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<TodoItemEntity>> GetAllAsync()
+    public async Task<IEnumerable<TodoItemDto>> GetAllAsync()
     {
         return await _todoItemsService.GetAllAsync();
     }
